@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/main.js" defer></script>
+</head>
+<body>
+
+<div class="builder-container">
+
+    <h2>Create Your Resume</h2>
+
+    <form action="/generate" method="POST">
+
+        <div class="section">
+            <h3>Personal Info</h3>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="jobrole" placeholder="Target Role">
+            <input type="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="section">
+            <h3>Skills</h3>
+            <textarea name="skills" placeholder="List skills separated by comma"></textarea>
+        </div>
+
+        <div class="section">
+            <h3>Education</h3>
+            <textarea name="education"></textarea>
+        </div>
+
+        <div class="section">
+            <h3>Projects</h3>
+            <textarea name="projects"></textarea>
+        </div>
+
+        <div class="section">
+            <h3>Experience</h3>
+            <textarea name="experience"></textarea>
+        </div>
+
+        <div class="section">
+            <h3>Choose Template</h3>
+            <select name="template">
+                <option value="modern">Modern</option>
+                <option value="minimal">Minimal</option>
+                <option value="corporate">Corporate</option>
+            </select>
+        </div>
+
+        <button class="primary-btn">Generate Resume</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

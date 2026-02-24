@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="top-nav">
+    <div class="logo">AI Resume Studio</div>
+    <div>
+        <a href="/" class="nav-btn">Home</a>
+        <button onclick="analyzeResume()" class="nav-btn primary">Analyze</button>
+    </div>
+</div>
+
+<div class="analysis-container">
+    <h2>Resume Strength Analyzer</h2>
+
+    <textarea id="analysisText" placeholder="Paste your resume content here"></textarea>
+
+    <div id="scoreResult"></div>
+
+    <canvas id="analysisChart" width="400" height="200"></canvas>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

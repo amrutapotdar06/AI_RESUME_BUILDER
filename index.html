@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app-container">
+
+    <div class="sidebar">
+        <h2>AI Resume Studio</h2>
+        <button onclick="generateResume()">Generate Resume</button>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <div class="main">
+
+        <div class="form-section">
+            <h2>Build Your Resume</h2>
+
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="text" id="role" placeholder="Job Role">
+            <textarea id="skills" placeholder="Skills"></textarea>
+            <textarea id="education" placeholder="Education"></textarea>
+            <textarea id="projects" placeholder="Projects"></textarea>
+            <textarea id="experience" placeholder="Experience"></textarea>
+        </div>
+
+        <div class="preview-section">
+            <h2>Live Preview</h2>
+            <div id="resumePreview" class="resume-box"></div>
+            <div id="coverPreview" class="cover-box"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
